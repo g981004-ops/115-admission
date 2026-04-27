@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>115學年度國企系大學個人申請口試 試務規劃</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- 國企系 Logo 如果有可以放這裡，我們暫用文字 -->
+            <span class="logo-text">NCNU IBS</span>
+        </div>
+        <h1>115學年度國企系大學個人申請口試 試務規劃</h1>
+        <p>點擊平面圖上各區域或下方時間軸，檢視該站點詳細 SOP 流程與現場佈置實拍</p>
+    </header>
+
+    <main>
+        <!-- 時間軸 -->
+        <div class="timeline">
+            <div class="timeline-step" data-target="checkin_out">
+                <div class="step-circle">1</div>
+                <div class="step-text">報到處<br>(管427外)</div>
+            </div>
+            <div class="timeline-line"></div>
+            <div class="timeline-step" data-target="checkin_in">
+                <div class="step-circle">2</div>
+                <div class="step-text">報到等待室<br>(管427)</div>
+            </div>
+            <div class="timeline-line"></div>
+            <div class="timeline-step" data-target="interview1">
+                <div class="step-circle">3</div>
+                <div class="step-text">第一關面試<br>(管429)</div>
+            </div>
+            <div class="timeline-line"></div>
+            <div class="timeline-step" data-target="interview2">
+                <div class="step-circle">4</div>
+                <div class="step-text">第二關面試<br>(管432)</div>
+            </div>
+            <div class="timeline-line"></div>
+            <div class="timeline-step" data-target="questionnaire">
+                <div class="step-circle">5</div>
+                <div class="step-text">問卷室<br>(管331)</div>
+            </div>
+        </div>
+
+        <!-- 互動平面圖 -->
+        <div class="map-container">
+            <img src="assets/floor-plan/exported/slide_1.png" alt="國企系口試試場平面圖" class="floor-plan">
+            
+            <!-- 熱區 Overlay -->
+            <div class="hotspot" id="spot-checkin-out" data-target="checkin_out" title="報到處 (管427外)">
+                <div class="pulse"></div>
+            </div>
+            <div class="hotspot" id="spot-checkin-in" data-target="checkin_in" title="報到室 (管427)">
+                <div class="pulse"></div>
+            </div>
+            <div class="hotspot" id="spot-interview1" data-target="interview1" title="第一關 (管429)">
+                <div class="pulse"></div>
+            </div>
+            <div class="hotspot" id="spot-office" data-target="office" title="系辦 (管431)">
+                <div class="pulse"></div>
+            </div>
+            <div class="hotspot" id="spot-interview2" data-target="interview2" title="第二關 (管432)">
+                <div class="pulse"></div>
+            </div>
+            <div class="hotspot" id="spot-questionnaire" data-target="questionnaire" title="問卷室 (管331)">
+                <div class="pulse"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal 彈窗 -->
+    <div id="sop-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <div class="modal-header">
+                <h2 id="modal-title">區域名稱</h2>
+                <span class="badge" id="modal-floor">樓層</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-info">
+                    <div class="info-section">
+                        <h3>📌 用途</h3>
+                        <p id="modal-purpose"></p>
+                    </div>
+                    <div class="info-section">
+                        <h3>✅ SOP 流程</h3>
+                        <ul id="modal-sop"></ul>
+                    </div>
+                    <div class="info-section">
+                        <h3>📦 佈置物資</h3>
+                        <ul id="modal-equipment" class="tags-list"></ul>
+                    </div>
+                    <div class="info-section">
+                        <h3>👥 工作人員</h3>
+                        <ul id="modal-staff" class="tags-list staff-tags"></ul>
+                    </div>
+                </div>
+                <div class="modal-visuals">
+                    <h3>📷 現場佈置參考</h3>
+                    <div class="carousel">
+                        <div class="carousel-images" id="carousel-container">
+                            <!-- 圖片將由 JS 動態插入 -->
+                        </div>
+                        <button class="carousel-btn prev">&#10094;</button>
+                        <button class="carousel-btn next">&#10095;</button>
+                        <div class="carousel-dots" id="carousel-dots">
+                            <!-- 點點指示器 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
