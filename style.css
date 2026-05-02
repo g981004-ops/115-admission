@@ -46,6 +46,7 @@ h1 {
     margin: 0.5rem 0;
     background: linear-gradient(90deg, #f8fafc, #cbd5e1);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -166,7 +167,7 @@ main {
 }
 
 /* Coordinates estimated from the image 1920x1080 */
-#spot-checkin-out { left: 5%; width: 3.5%; top: 8%; height: 24%; border-style: dashed; } /* Left of 427 */
+#spot-checkin-out { left: 9%; width: 10%; top: 35%; height: 12%; border-style: dashed; } /* Open space in front of 427 */
 #spot-checkin-in { left: 8.8%; width: 10.5%; top: 8%; height: 24%; }
 #spot-interview1 { left: 20.2%; width: 9.8%; top: 8%; height: 24%; }
 #spot-office { left: 30.6%; width: 10.2%; top: 8%; height: 24%; }
